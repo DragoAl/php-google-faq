@@ -48,8 +48,24 @@ header {
 }
 
 img {
-    margin: 20px 20px 0;
-    width: 100px;
+    margin: 20px 5px 0;
+    width: 80px;
+}
+
+.box-header {
+    padding: 15px 25px 0;
+    display: flex;
+    align-items:  center;
+}
+
+.logoText {
+    display: inline-block;
+    font-weight: 300;
+    color: #3c4043;
+    font-size: 24px;
+    margin: 0 10px;
+    padding-top: 20px;
+    cursor: pointer;
 }
 
 nav {

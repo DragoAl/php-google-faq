@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> 
    
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Domande Frequenti</title>
 
     <?php
         $faqArray = [
@@ -98,7 +98,10 @@
 </head>
 <body>
     <header>
-        <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="logo">
+        <div class="box-header">
+            <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="logo">
+            <div class="logoText">Privacy e termini</div>
+        </div>
 
         <nav>
             <?php
