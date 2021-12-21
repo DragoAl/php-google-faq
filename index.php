@@ -59,7 +59,7 @@
             ],
         ];
 
-        $menuItems = [
+        $headerMenuItems = [
             [
                 'navItem' => 'Introduzione',
                 'active'  => false
@@ -80,22 +80,14 @@
                 'navItem' => 'Domande Frequenti',
                 'active' => true
             ]
-             
-             
-             
-            
-            
-        ]
+                        
+        ];
 
-
-
-
-
+        $footerMenuItems = ['Google', 'Tutto su Google', 'Privacy', 'Termini']
 
     ?>
-
-
 </head>
+
 <body>
     <header>
         <div class="box-header">
@@ -105,13 +97,13 @@
 
         <nav>
             <?php
-                foreach ($menuItems as $item) {
-                    if ($item['active'] === true) {
-                        
-                        echo '<ul>'. '<li class= "style-nav active" >'.$item['navItem'] . '</li>' .'</ul>' ;
-                    } else {
-                        echo '<ul>'. '<li class= style-nav >'.$item['navItem'] . '</li>' .'</ul>' ;
+                foreach ($headerMenuItems as $navItem) {
 
+                    if ($navItem['active'] === true) {
+                        echo '<ul>'. '<li class= "style-nav active" >'.$navItem['navItem'] . '</li>' .'</ul>' ;
+
+                    } else {
+                        echo '<ul>'. '<li class= style-nav >'.$navItem['navItem'] . '</li>' .'</ul>' ;
                     }
                 }
             ?>
@@ -125,21 +117,25 @@
 
                 echo '<h2>' . $faq['question'] . '</h2>';
                 foreach ($answerExplode as $paragrphsOfAnswer) {
-                    
                     echo  '<p>' . $paragrphsOfAnswer . '</p>';
                     
                 }
                 
-                // '<p>' . $answerExplode . '</p>'. 
-                
-                
             }
         ?>
         
-       
-
     </div>
+    <footer>
+        <div class="footerMenu">
+            <?php
+            foreach ($footerMenuItems as $footerItem) {
+                echo '<ul>'. '<li class= style-nav-foot >'.$footerItem . '</li>' .'</ul>' ;
+                
+            }
+            ?>
+            
+        </div>
+    </footer>
 
-    
 </body>
 </html>
